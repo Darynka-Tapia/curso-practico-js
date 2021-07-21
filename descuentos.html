@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y Descuentos</title>
+</head>
+<body>
+    
+    <h1>Porcentajes y descuentos</h1>
+
+    <div class="container">
+        <div class="card">
+            <div class="container-img">
+                <div style="display: none;" class="porcentaje" id="spanPorcentaje">%</div>
+                <img src="img/descuentos/cupcakes2.jpg">
+            </div>
+            <span><b></b>Caja con 6 cupckaes de Oreo</span>
+            <span id="costoCard">$<span id="costoCardNumber">180.00</span> MXN</span>
+            <span id="newCostoCard" style="display: none;"></span>
+
+            <small class="smallCupon" id="smallCupon" onclick="showInput()">aplicar cupon</small>
+            <div class="containerApply">
+                <input type="text" class="inputCupon" id="inputCupon">
+                <small class="applyCupon" id="applyCupon" onclick="applyCupon()">Aplicar</small>
+            </div>
+            <span id="errorCupon"></span>
+        </div>
+
+        
+        <div>
+            <h2>Listado de cupones</h2>
+            <ul>
+                <li>primera-compra</li>
+                <li>verano21</li>
+                <li>secreto</li>
+            </ul>
+        </div>  
+    </div>
+    
+
+    
+    
+    
+    <script src="descuentos.js"></script>
+
+</body>
+</html>
+
+<style>
+    .card .container-img{
+        background: rgb(241, 240, 240);
+    }
+    .card .container-img img{
+        width: 200px;
+        height:200px;
+        object-fit: contain;
+        margin-top: 10px;
+    }
+    .card{
+        display:flex;
+        flex-direction: column;
+        border: 2px solid;
+        width: fit-content;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .card span {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .smallCupon, .applyCupon{
+        align-self: flex-end;
+        border: 2px solid green;
+        color: green;
+        border-radius: 50px;
+        padding: 0px 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .containerApply{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .applyCupon{
+        color: #fff;
+        background: green;
+        display: none;
+        border-radius: 0px 10px 10px 0px ;
+    }
+    .inputCupon{
+        width: 60%;
+        align-self: flex-end;
+        border:0px;
+        border-bottom: 2px solid green;
+        color: rgb(72, 124, 72);
+        padding: 0px 5px;
+        margin-top: 10px;
+        display: none;
+    }
+    .inputCupon:focus-visible{
+        outline: 0px solid;
+    }
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    h1{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .container-img{
+        position: relative;
+        display: inline-block;
+    }
+    .porcentaje{
+        display: flex;
+        border: 1px solid green;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        color: #fff;
+        background: green;
+        font-size: 12px;
+    }
+
+
+</style>

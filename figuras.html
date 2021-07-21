@@ -25,35 +25,48 @@
 
         <div class="container_formas">
             <section class="cuadrado">
-                <h2>Cuadrado</h2>
-                <div class="resultadoCuadrado">
+               
+                <div class="forma-titulo">
                     <img src="img/cuadrado.png" alt="Cuadrado" class="perimetroShow">
-                    <span id="resCuadrado" class="resCuadradoArea">area cm <sup>2</sup></span>
-                    <span id="resCuadrado" class="resCuadradoPerimetro">area cm <sup>2</sup></span>
+                    <h2>Cuadrado</h2>
                 </div>
                 
                 <form action="">
                     <label for="inputCuadrado">Escribe cuanto mide cada lado de tu cuadrado: </label>
-                    <input type="number" name="" id="inputCuadrado" />
-                    <button type="button" onclick="calcularPerimeroCuadrado()">Calcular el perímetro</button>
-                    <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
-                    
+                    <input type="number" name="" id="inputCuadrado"/>
+                    <select name="select" class="select-unidad-medida">
+                        <option value="2">cm</option>
+                        <option value="3">dm</option>
+                        <option value="4">m</option>
+                        <option value="5">dam</option>
+                        <option value="6">hm</option>
+                        <option value="7">km</option>
+                    </select>
+                    <div class="botones">
+                        <button type="button" onclick="calcularPerimeroCuadrado()">Calcular el perímetro</button>
+                        <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                    </div>
+                    <div class="container-resultado">
+                        <span class="labelResultado">El resultado es: </span>
+                        <span id="resCuadrado" class="resCuadradoArea">area cm <sup>2</sup></span> 
+                    </div>               
                 </form>
             </section>
     
             <section>
-                <h2>Triangulo</h2>
-                <img src="img/triangulo.png" alt="Triangulo">
-                <form action="">
-    
+                <div class="forma-titulo">
+                    <img src="img/triangulo.png" alt="Triangulo">
+                    <h2>Triangulo</h2>
+                </div>
+                    <br>
                     <label for="inputLado1">Lado 1: </label>
-                    <input type="number" name="" id="inputLado1" />
+                    <input type="number" name="" id="inputLado1" /><br>
                     <label for="inputLado2">Lado 2: </label>
-                    <input type="number" name="" id="inputLado2" />
+                    <input type="number" name="" id="inputLado2" /><br>
                     <label for="inputBase">Base: </label>
-                    <input type="number" name="" id="inputBase" />
+                    <input type="number" name="" id="inputBase" /><br>
                     <label for="inputAltura">Altura: </label>
-                    <input type="number" name="" id="inputAltura" />
+                    <input type="number" name="" id="inputAltura" /><br>
     
                     <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el perímetro</button>
                     <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
@@ -63,8 +76,10 @@
     
     
             <section>
-                <h2>Circulo</h2>
-                <img src="img/circulo.png" alt="Circulo">
+                <div class="forma-titulo">
+                    <img src="img/circulo.png" alt="Circulo">
+                    <h2>Circulo</h2>
+                </div>
                 <form action="">
     
                     <label for="inputRadio">Radio: </label>
