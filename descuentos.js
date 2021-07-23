@@ -49,7 +49,6 @@ function applyCupon(){
                 document.getElementById('spanPorcentaje').innerHTML=  '- '+c.descuento+'%';
                 document.getElementById('spanPorcentaje').style.display = 'flex';
                 let precio = document.getElementById('costoCardNumber').innerHTML;
-                console.log('aqui',precio);
                 let descuento = (parseFloat(precio) * (100 - c.descuento))/100;
                 document.getElementById('newCostoCard').innerHTML=String(descuento.toFixed(2)) + "MXN";
 
